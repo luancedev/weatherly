@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+@import 'tailwind-animations';
+
+body {
+  background: linear-gradient(to bottom, #0f172a 60%, #6366f1);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
