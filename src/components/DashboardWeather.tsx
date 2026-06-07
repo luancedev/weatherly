@@ -17,7 +17,7 @@ export function DashBoardWeather({ data }: Props) {
         </h1>
       </header>
       <p className="text-base sm:text-lg lg:text-xl mt-2 text-center">
-        {name}, {admin1}, {country}
+        {name}, {admin1.replace('Estado de ', '')}, {country}
       </p>
       <p className="text-sm sm:text-base">
         Sensación de{' '}
