@@ -17,7 +17,6 @@ export const GetWeather = async (city: string): Promise<WeatherState> => {
   );
 
   const weatherData = await weatherRes.json();
-  console.log(weatherData);
 
   return { weatherData, name, country, admin1 };
 };

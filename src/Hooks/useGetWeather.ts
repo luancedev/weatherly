@@ -64,7 +64,6 @@ export function useGetWeather() {
         `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=es`,
       );
       const geoData = await geoRes.json();
-      console.log(geoData);
 
       const { weatherData } = await fetchWeather(latitude, longitude);
       setWeatherData({
