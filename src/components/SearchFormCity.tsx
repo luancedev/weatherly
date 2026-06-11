@@ -42,13 +42,13 @@ export function SearchFormCity({ onSearch }: Props) {
           className="text-white text-sm sm:text-base w-full placeholder:text-white focus:outline-0 bg-transparent"
           type="text"
           name="city"
-          placeholder="Buscar por ciudad"
+          placeholder="Search for a city..."
         />
         <button
           type="submit"
           className="text-white bg-[#0EA5E9] py-1 px-3 rounded-sm cursor-pointer transition hover:opacity-75"
         >
-          Buscar
+          Search
         </button>
       </form>
     </section>

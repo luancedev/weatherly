@@ -7,7 +7,6 @@ interface Props {
   date: string;
   tempMax: number;
   tempMin: number;
-  windspeed_max?: number;
   precipitationProb: number;
 }
 
@@ -25,7 +24,7 @@ const getRainColor = (prob: number) => {
 };
 
 export function DaysCard({ date, tempMax, tempMin, precipitationProb }: Props) {
-  const dayName = new Date(`${date}T00:00:00`).toLocaleDateString('es-MX', {
+  const dayName = new Date(`${date}T00:00:00`).toLocaleDateString('en-US', {
     weekday: 'long',
   });
   const isToday =
@@ -34,11 +33,11 @@ export function DaysCard({ date, tempMax, tempMin, precipitationProb }: Props) {
   const rainIcon = getRainIcon(precipitationProb);
 
   return (
-    <article className="flex gap-2 flex-col min-w-30 p-5 justify-between items-center rounded-sm bg-[#171f33]/40 backdrop-blur-3xl transition ease-in-out duration-150 hover:scale-105 animate-range-brisk ">
+    <article className="flex gap-2 flex-col min-w-30 p-5 justify-between items-center transition ease-in-out duration-150 hover:scale-105 animate-range-brisk border-r border-white/3 last:border-r-0">
       <h3
         className={`capitalize font-semibold ${isToday ? 'text-sky-400' : 'text-white'}`}
       >
-        {isToday ? 'Hoy' : dayName}
+        {isToday ? 'Today' : dayName}
       </h3>
       <div
         className={`flex items-center gap-1 ${getRainColor(precipitationProb)}`}
@@ -55,7 +54,7 @@ export function DaysCard({ date, tempMax, tempMin, precipitationProb }: Props) {
 
       <div className="flex w-full items-center">
         <p className="flex gap-2 items-center justify-center">
-          <span className="font-bold text-xl text-white">{tempMax}°</span>
+          <span className="font-bold text-lg text-white">{tempMax}°</span>
           <span className="text-[12px] text-neutral-400"> {tempMin}°</span>
         </p>
       </div>

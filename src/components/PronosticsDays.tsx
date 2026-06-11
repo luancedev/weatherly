@@ -14,14 +14,13 @@ export function PronosticsDays({ data }: Props) {
     precipitation_probability_max,
   } = weatherData.daily;
   return (
-    <section className="flex flex-col gap-5 text-white w-full p-6 animate-fade-in-right delay-150">
+    <section className="flex flex-col gap-5 text-white w-full p-6 animate-fade-in-right bg-[#1c2c4d]/30 rounded-2xl delay-150">
       <header>
         <h2 className="text-blue-200 xl:text-3xl font-bold sm:text-2xl">
           7-Day Forecast
         </h2>
-        <p className="text-neutral-300">Expected climates this week</p>
       </header>
-      <ul className="flex gap-1.5 w-full overflow-x-auto pb-2 scrollbar-track-transparent scrollbar-thumb-[#171f33]  timeline-view">
+      <ul className="flex w-full overflow-x-auto pb-2 scrollbar-track-transparent scrollbar-thumb-[#171f33]  timeline-view">
         {time.map((day, index) => (
           <DaysCard
             key={day}

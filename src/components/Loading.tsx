@@ -19,7 +19,7 @@ export function LoadingWeather() {
       </svg>
 
       <p className="text-white/60 text-sm tracking-widest uppercase animate-pulse">
-        Obteniendo clima...
+        Loading weather...
       </p>
 
       <div className="flex flex-col items-center gap-3 w-full max-w-sm">
